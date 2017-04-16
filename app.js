@@ -6,11 +6,8 @@ const app = express();
 app.use(logger('dev'));
 
 // Routes
-app.get('/', (req, res, err) => {
-  res.status(200).json({
-    'message': 'You requested index page'
-  })
-})
+const users = require('./routes/users');
+app.use('/users', users);
 
 // Catch 404
 app.use((req, res, next) => {
