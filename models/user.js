@@ -6,7 +6,7 @@ const userSchema = new Schema({
   'lastName': { type: String },
   'email': { type: String },
   'cars': [{
-    type: Schema.Type.ObjectId,
+    type: Schema.Types.ObjectId,
     ref: 'car'
   }]
 });
