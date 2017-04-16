@@ -1,6 +1,13 @@
 const express = require('express');
 const logger = require('morgan');
+const mongoose = require('mongoose');
+
+mongoose.Promise = global.Promise;
+mongoose.connect('mongodb://localhost/apiproject');
+
 const app = express();
+
+
 
 // Middlewares
 app.use(logger('dev'));
